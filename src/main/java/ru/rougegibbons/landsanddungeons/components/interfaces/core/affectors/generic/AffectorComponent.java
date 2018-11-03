@@ -24,7 +24,7 @@ public interface AffectorComponent extends PackableComponent,
     @NotNull Integer getAffection();
 
     /**
-     * get target property digital label;
+     * get target property digital label.
      *
      * @return target property label.
      */
