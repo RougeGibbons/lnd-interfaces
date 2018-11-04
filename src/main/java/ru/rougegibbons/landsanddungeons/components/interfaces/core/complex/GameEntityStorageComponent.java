@@ -6,7 +6,8 @@ import ru.rougegibbons.landsanddungeons.components.interfaces.core.mixins.Packab
 import ru.rougegibbons.landsanddungeons.entities.interfaces.core.GameEntity;
 
 /**
- * generified interface for components that may store some ingame entities, e.g. backpack/bank slots or spellbooks.
+ * generified interface for components that may store some ingame entities
+ * (e.g. backpack/bank slots, spellbook, talent trees, etc.).
  *
  * @param <T> - any class implementing  {@link GameEntity} interface or its extensions.
  * @see GameEntity
@@ -21,7 +22,7 @@ public interface GameEntityStorageComponent<T extends GameEntity> extends Packab
     @Nullable T getStored();
 
     /**
-     * checks if component stores some entity or not?
+     * checks if component stores some entity or not.
      *
      * @return true if stored value is null, false otherwise.
      */
