@@ -1,7 +1,9 @@
 package ru.rougegibbons.landsanddungeons.components.interfaces.core.complex;
 
 import ru.rougegibbons.landsanddungeons.components.interfaces.Component;
+import ru.rougegibbons.landsanddungeons.components.interfaces.core.affectors.generic.AffectorComponent;
 import ru.rougegibbons.landsanddungeons.components.interfaces.core.mixins.PackableComponent;
+import ru.rougegibbons.landsanddungeons.components.interfaces.core.properties.PropertyComponent;
 
 import java.util.Map;
 
@@ -18,4 +20,25 @@ import java.util.Map;
  */
 public interface MapProviderComponent<K, T extends Component>
         extends PackableComponent, Map<K, T> {
+    /**
+     * {@link MapProviderComponent} interface extension representing game entity properties container.
+     *
+     * @see ru.rougegibbons.landsanddungeons.entities.interfaces.core.GameEntity
+     * @see PropertyComponent
+     * @since 1.0.2
+     */
+    interface GameEntityPropertiesContainer extends MapProviderComponent<Long, PropertyComponent> {
+
+    }
+
+    /**
+     * {@link MapProviderComponent} interface extension representing game entity affectors container.
+     *
+     * @see ru.rougegibbons.landsanddungeons.entities.interfaces.core.GameEntity
+     * @see AffectorComponent
+     * @since 1.0.2
+     */
+    interface GameEntityAffectorsContainer extends
+            MapProviderComponent<Long, ListProviderComponent<AffectorComponent>> {
+    }
 }
