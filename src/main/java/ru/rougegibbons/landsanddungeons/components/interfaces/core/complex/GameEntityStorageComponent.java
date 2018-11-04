@@ -6,8 +6,7 @@ import ru.rougegibbons.landsanddungeons.components.interfaces.core.mixins.Packab
 import ru.rougegibbons.landsanddungeons.entities.interfaces.core.GameEntity;
 
 /**
- * generified interface for components that may store some ingame entities,
- * e.g. backpack/bank slots, spellbook, talent trees, etc.
+ * generified interface for components that may store some ingame entities, e.g. backpack/bank slots or spellbooks.
  *
  * @param <T> - any class implementing  {@link GameEntity} interface or its extensions.
  * @see GameEntity
