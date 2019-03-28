@@ -47,15 +47,30 @@ public interface ModifiableSingleNumberComponent<T extends Number>
      */
     void modifyByPercentage(@NotNull Integer percent);
 
-    interface ModifiableSingleIntComponent extends SingleIntComponent {
+    /**
+     * {@link ModifiableSingleNumberComponent} extension for {@link Integer} numbers.
+     *
+     * @since 0.3.3
+     */
+    interface ModifiableSingleIntComponent extends ModifiableSingleNumberComponent<Integer> {
 
     }
 
-    interface ModifiableSingleLongComponent extends SingleLongComponent {
+    /**
+     * {@link ModifiableSingleNumberComponent} extenison for {@link Long} numbers.
+     *
+     * @since 0.3.3
+     */
+    interface ModifiableSingleLongComponent extends ModifiableSingleNumberComponent<Long> {
 
     }
 
-    interface ModifiableSingleFloatComponent extends SingleFloatComponent {
+    /**
+     * {@link ModifiableSingleNumberComponent} extension for {@link Float} numbers.
+     *
+     * @since 0.3.3
+     */
+    interface ModifiableSingleFloatComponent extends ModifiableSingleNumberComponent<Float> {
 
     }
 }

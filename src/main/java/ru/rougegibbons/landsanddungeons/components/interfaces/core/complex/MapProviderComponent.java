@@ -35,10 +35,27 @@ public interface MapProviderComponent<K, T extends Component>
      * {@link MapProviderComponent} interface extension representing game entity affectors container.
      *
      * @see ru.rougegibbons.landsanddungeons.entities.interfaces.core.GameEntity
+     * @see ListProviderComponent.AffectorsList
      * @see AffectorComponent
      * @since 1.0.2
      */
     interface GameEntityAffectorsContainer extends
-            MapProviderComponent<Long, ListProviderComponent<AffectorComponent>> {
+            MapProviderComponent<Long, ListProviderComponent.AffectorsList> {
     }
+
+    /**
+     * {@link MapProviderComponent} interface extension representing poll's votes container.
+     *
+     * @see MapProviderComponent
+     * @see ru.rougegibbons.landsanddungeons.entities.interfaces.gamemechanics.alive.containers.social.polls.Vote
+     * @see ru.rougegibbons.landsanddungeons.entities.interfaces.gamemechanics.alive.containers.social.polls.Poll
+     * @see GameEntityStorageComponent.VoteSlot
+     * @since 1.1.3
+     */
+    interface VotesContainer extends
+            MapProviderComponent<Long, GameEntityStorageComponent.VoteSlot> {
+
+    }
+
+
 }

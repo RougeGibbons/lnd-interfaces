@@ -156,16 +156,31 @@ public interface ModifiableClampedNumberComponent<T extends Number>
     void modifyBoundariesByPercentage(@NotNull Float lower,
                                       @NotNull Float upper);
 
+    /**
+     * {@link ModifiableClampedNumberComponent} extension for {@link Integer} numbers.
+     *
+     * @since 0.3.5
+     */
     interface ModifiableClampedIntegerComponent
             extends ModifiableClampedNumberComponent<Integer> {
 
     }
 
+    /**
+     * {@link ModifiableClampedNumberComponent} extension for {@link Long} numbers.
+     *
+     * @since 0.3.5
+     */
     interface ModifiableClampedLongComponent
             extends ModifiableClampedNumberComponent<Long> {
 
     }
 
+    /**
+     * {@link ModifiableClampedNumberComponent} extension for {@link Float} numbers.
+     *
+     * @since 0.3.5
+     */
     interface ModifiableClampedFloatComponent
             extends ModifiableClampedNumberComponent<Float> {
 

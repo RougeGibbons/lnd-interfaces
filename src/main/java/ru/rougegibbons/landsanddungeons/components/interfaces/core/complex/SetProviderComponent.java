@@ -2,6 +2,7 @@ package ru.rougegibbons.landsanddungeons.components.interfaces.core.complex;
 
 import ru.rougegibbons.landsanddungeons.components.interfaces.Component;
 import ru.rougegibbons.landsanddungeons.components.interfaces.core.mixins.PackableComponent;
+import ru.rougegibbons.landsanddungeons.components.interfaces.core.numbers.SingleNumberComponent;
 
 import java.util.Set;
 
@@ -17,4 +18,13 @@ import java.util.Set;
  */
 public interface SetProviderComponent<T extends Component>
         extends PackableComponent, Set<T> {
+    /**
+     * {@link SetProviderComponent} interface extensions for storing sets of other entities' IDs.
+     *
+     * @see SetProviderComponent
+     * @since 1.1.3
+     */
+    interface IdSetComponent extends SetProviderComponent<SingleNumberComponent.SingleLongComponent> {
+
+    }
 }

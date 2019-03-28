@@ -155,15 +155,30 @@ public interface ModifiablePairNumberComponent<T extends Number>
      */
     void modifySecondByPercentage(@NotNull Integer percent);
 
-    interface ModifiablePairIntComponent extends PairIntComponent {
+    /**
+     * {@link ModifiablePairNumberComponent} extension for {@link Integer} numbers.
+     *
+     * @since 0.3.3
+     */
+    interface ModifiablePairIntComponent extends ModifiablePairNumberComponent<Integer> {
 
     }
 
-    interface ModifiablePairLongComponent extends PairLongComponent {
+    /**
+     * {@link ModifiablePairNumberComponent} extension for {@link Long} numbers.
+     *
+     * @since 0.3.3
+     */
+    interface ModifiablePairLongComponent extends ModifiablePairNumberComponent<Long> {
 
     }
 
-    interface ModifiablePairFloatComponent extends PairFloatComponent {
+    /**
+     * {@link ModifiablePairNumberComponent} extension for {@link Float} numbers.
+     *
+     * @since 0.3.3
+     */
+    interface ModifiablePairFloatComponent extends ModifiablePairNumberComponent<Float> {
 
     }
 }
