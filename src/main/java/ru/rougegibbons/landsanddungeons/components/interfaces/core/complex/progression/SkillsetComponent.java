@@ -19,8 +19,10 @@ import ru.rougegibbons.landsanddungeons.components.interfaces.core.properties.Pr
 public interface SkillsetComponent extends
         MapProviderComponent<Long, AbilityProgressionComponent>, PropertyComponent {
     /**
+     * check if the ability is available for usage.
+     *
      * @param abilityId - id of the ability to check.
-     * @return true if ability with given id is present in skillset and
+     * @return true if ability with given id is present in skillset and is available to be used, false otherwise.
      */
     default @NotNull Boolean isAvailable(@NotNull Long abilityId) {
         return containsKey(abilityId) && get(abilityId).isAvailable();

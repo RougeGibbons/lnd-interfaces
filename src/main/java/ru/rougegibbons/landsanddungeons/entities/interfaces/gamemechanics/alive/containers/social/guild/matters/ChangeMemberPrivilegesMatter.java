@@ -22,7 +22,7 @@ public interface ChangeMemberPrivilegesMatter extends GuildMatter {
     /**
      * get privileges to be changed with their new values.
      *
-     * @return {@link java.util.Map} of {@link ru.rougegibbons.landsanddungeons.entities.interfaces.gamemechanics.alive.containers.social.guild.privileges.PrivilegeKind} to be changed to their new {@link ru.rougegibbons.landsanddungeons.entities.interfaces.gamemechanics.alive.containers.social.guild.privileges.PrivilegeLevel} as {@link PrivelegesHolderComponent}.
+     * @return {@link java.util.Map} of privilege kinds to be changed to their new levels as {@link PrivelegesHolderComponent}.
      */
     @NotNull PrivelegesHolderComponent getChangedPrivileges();
 }

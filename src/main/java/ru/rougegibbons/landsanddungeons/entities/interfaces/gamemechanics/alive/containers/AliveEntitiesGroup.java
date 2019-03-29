@@ -27,7 +27,7 @@ public interface AliveEntitiesGroup extends UpdateableEntity {
      * get the group member by id.
      *
      * @param memberId - id of the member to get.
-     * @return {@link AliveEntity} implementation instance representing requested group member or null if there's no member with such id in the group.
+     * @return {@link AliveEntity} as requested group member or null if there's no member with such id in the group.
      */
     @Nullable AliveEntity getMember(@NotNull Long memberId);
 

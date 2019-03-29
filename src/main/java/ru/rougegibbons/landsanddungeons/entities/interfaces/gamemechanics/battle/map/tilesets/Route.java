@@ -73,6 +73,16 @@ public interface Route extends Tileset {
     }
 
     /**
+     * get destination on given distance from the start point.
+     *
+     * @param distance - distance to get the destination on.
+     * @return given destination node's coordinates.
+     */
+    default @NotNull PairNumberComponent.PairIntComponent getDestinationCoordinates(@NotNull Integer distance) {
+        return getRouteOrdering().get(distance);
+    }
+
+    /**
      * get route's length in map nodes.
      *
      * @return route's length in map nodes (start node not counted).
@@ -87,16 +97,6 @@ public interface Route extends Tileset {
      * @return this route's full movement cost.
      */
     @NotNull Integer getTravelCost();
-
-    /**
-     * get destination on given distance from the start point.
-     *
-     * @param distance - distance to get the destination on.
-     * @return {@link PairNumberComponent.PairIntComponent} instance storing given destination node's coordinates.
-     */
-    default @NotNull PairNumberComponent.PairIntComponent getDestinationCoordinates(@NotNull Integer distance) {
-        return getRouteOrdering().get(distance);
-    }
 
     /**
      * see {@link Tileset} description.

@@ -19,7 +19,7 @@ public interface Aura {
     @NotNull Integer getRange();
 
     /**
-     * get effect's area shape. Shape shall be one of the listed in {@link ru.rougegibbons.landsanddungeons.entities.interfaces.gamemechanics.battle.map.tilesets.TilesetShape},
+     * get effect's area shape.
      *
      * @return effect's area shape.
      */

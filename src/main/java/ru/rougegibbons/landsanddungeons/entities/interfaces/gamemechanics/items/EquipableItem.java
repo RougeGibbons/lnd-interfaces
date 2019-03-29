@@ -27,7 +27,7 @@ public interface EquipableItem extends Item, Equipable {
     /**
      * checks if equipable is an armor piece.
      *
-     * @return true if the entity implements {@link ru.rougegibbons.landsanddungeons.entities.interfaces.gamemechanics.items.mixins.Armor} interface, false otherwise.
+     * @return true if the entity implements Armor interface, false otherwise.
      */
     default @NotNull Boolean isArmor() {
         return false;
@@ -36,7 +36,7 @@ public interface EquipableItem extends Item, Equipable {
     /**
      * checks if equipable is a weapon.
      *
-     * @return true if the entity implements {@link ru.rougegibbons.landsanddungeons.entities.interfaces.gamemechanics.items.mixins.Weapon} interface, false otherwise.
+     * @return true if the entity implements Weapon interface, false otherwise.
      */
     default @NotNull Boolean isWeapon() {
         return false;

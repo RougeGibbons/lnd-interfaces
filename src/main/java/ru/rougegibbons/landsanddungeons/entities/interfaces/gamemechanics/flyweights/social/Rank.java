@@ -30,7 +30,7 @@ public enum Rank {
     /**
      * get rank's social weight.
      *
-     * @return
+     * @return rank's social weight.
      */
     @NotNull Integer getWeight() {
         return weight;

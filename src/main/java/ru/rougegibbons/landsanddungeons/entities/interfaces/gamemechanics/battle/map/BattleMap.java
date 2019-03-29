@@ -49,7 +49,7 @@ public interface BattleMap extends UpdateableEntity, WithLevel {
      *
      * @param rowIndex    - row index of the requested map node.
      * @param columnIndex - index of the requested node inside its row.
-     * @return {@link AliveEntity} instance if there's an NPC or user character standing on the requested node, null otherwise or if at least one coordinate is invalid.
+     * @return {@link AliveEntity} instance if the requested node is inhabited, null otherwise or if at least one coordinate is invalid.
      */
     default @Nullable AliveEntity getInhabitant(@NotNull Integer rowIndex,
                                                 @NotNull Integer columnIndex) {

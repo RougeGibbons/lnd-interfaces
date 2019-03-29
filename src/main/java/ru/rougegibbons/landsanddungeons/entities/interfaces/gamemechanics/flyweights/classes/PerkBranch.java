@@ -18,7 +18,9 @@ import ru.rougegibbons.landsanddungeons.entities.interfaces.gamemechanics.mixins
  */
 public interface PerkBranch extends GameEntity, Named, WithDescription {
     /**
-     * @return
+     * get this branch's perks.
+     *
+     * @return {@link PerksHolderComponent} storing perks belonging to this branch.
      */
     @NotNull PerksHolderComponent getPerks();
 }

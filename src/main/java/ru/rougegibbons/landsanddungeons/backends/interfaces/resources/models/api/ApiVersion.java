@@ -16,8 +16,8 @@ public interface ApiVersion {
      * @return {@link String} object with API version in $VersionMajor.$VersionMinor.$BuildVersion format.
      */
     default @NotNull String getVersion() {
-        return String.valueOf(getVersionMajor()) + SEPARATOR +
-                getVersionMinor() + SEPARATOR + getBuildVersion();
+        return String.valueOf(getVersionMajor()) + SEPARATOR
+                + getVersionMinor() + SEPARATOR + getBuildVersion();
     }
 
     /**

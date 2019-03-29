@@ -55,7 +55,7 @@ public interface CharacterProgressionComponent extends PropertyComponent, Levela
     void takeClass(@NotNull CharacterClass toTake);
 
     /**
-     * get character's total level. Total level is sum of levels in all {@link CharacterClass}es taken by this character plus unspent level up points.
+     * get character's total level. Total level is sum of levels in all classes taken by this character plus unspent level up points.
      *
      * @return character's total level.
      */

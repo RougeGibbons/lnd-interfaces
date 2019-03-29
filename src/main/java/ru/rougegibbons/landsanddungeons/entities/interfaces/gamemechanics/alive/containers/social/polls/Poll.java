@@ -190,7 +190,9 @@ public interface Poll extends GameEntity {
         }
 
         /**
-         * @return
+         * checks if the reason is guild related.
+         *
+         * @return true if the reason is guild-relatedm false otherwise.
          */
         @NotNull Boolean isGuildReason() {
             return (reasonId > PR_CUSTOM.reasonId)

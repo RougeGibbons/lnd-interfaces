@@ -18,9 +18,9 @@ public interface TimedVote extends Vote, Timed {
      */
     @Override
     default @NotNull Boolean isExpired() {
-        return getTimer().isElapsed() &&
-                (getResult() == VotingResult.VR_UNDEFINED
-                        || getResult() == VotingResult.VR_REFRAINED);
+        return getTimer().isElapsed()
+                && ((getResult() == VotingResult.VR_UNDEFINED)
+                || (getResult() == VotingResult.VR_REFRAINED));
     }
 
     /**

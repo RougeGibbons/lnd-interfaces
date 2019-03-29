@@ -12,7 +12,9 @@ import java.util.Map;
  */
 public interface ItemModel extends EntityModel {
     /**
-     * @return
+     * get item's blueprint.
+     *
+     * @return item's blueprint (map of the item part ids).
      */
     @NotNull Map<Integer, Long> getBlueprint();
 }

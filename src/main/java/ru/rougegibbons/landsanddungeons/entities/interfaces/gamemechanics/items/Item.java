@@ -20,7 +20,7 @@ public interface Item extends GameEntity {
     /**
      * checks if the item is stackable.
      *
-     * @return true if the entity implements {@link ru.rougegibbons.landsanddungeons.entities.interfaces.gamemechanics.items.mixins.Stackable} interface, false otherwise.
+     * @return true if the entity implements Stackable interface, false otherwise.
      */
     default @NotNull Boolean isStackable() {
         return false;
@@ -29,16 +29,16 @@ public interface Item extends GameEntity {
     /**
      * checks if the item is usable.
      *
-     * @return true if the entity implements {@link ru.rougegibbons.landsanddungeons.entities.interfaces.gamemechanics.items.mixins.Usable} interface, false otherwise.
+     * @return true if the entity implements Usable interface, false otherwise.
      */
     default @NotNull Boolean isUsable() {
         return false;
     }
 
     /**
-     * checks if the item is equipable
+     * checks if the item is equipable.
      *
-     * @return true if the entity implements {@link ru.rougegibbons.landsanddungeons.entities.interfaces.gamemechanics.items.mixins.Equipable} interface, fasle otherwise.
+     * @return true if the entity implements Equipable interface, fasle otherwise.
      */
     default @NotNull Boolean isEquipable() {
         return false;

@@ -75,7 +75,7 @@ public interface UserCharacterSocialData extends GameEntity, Named, WithLevel {
     /**
      * get access to guild membership controls if character's in some guild.
      *
-     * @return {@link GuildMembershipComponent} providing access to character's gulid controls if character belongs to some guild, null otherwise.
+     * @return {@link GuildMembershipComponent} providing access the gulid controls if character belongs to some guild, null otherwise.
      */
     @Nullable GuildMembershipComponent getGuild();
 

@@ -17,22 +17,30 @@ import ru.rougegibbons.landsanddungeons.entities.interfaces.gamemechanics.contex
  */
 public interface BattleStateContext extends Context {
     /**
-     * @return
+     * get the acting {@link AliveEntity}.
+     *
+     * @return acting {@link AliveEntity} instance.
      */
     @NotNull AliveEntity getSelf();
 
     /**
-     * @return
+     * get acting entity's allies.
+     *
+     * @return {@link AliveEntitiesGroup} storing acting entity's allies.
      */
     @NotNull AliveEntitiesGroup getAllies();
 
     /**
-     * @return
+     * get acting entity's enemies.
+     *
+     * @return {@link AliveEntitiesGroup} storing acting entity's enemies.
      */
     @NotNull AliveEntitiesGroup getEnemies();
 
     /**
-     * @return
+     * get battlefield's map.
+     *
+     * @return {@link BattleMap} instance representing battlefield's map.
      */
     @NotNull BattleMap getMap();
 }

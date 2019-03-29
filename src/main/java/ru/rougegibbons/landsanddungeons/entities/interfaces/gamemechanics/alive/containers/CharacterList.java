@@ -25,7 +25,7 @@ public interface CharacterList extends GameEntity {
     /**
      * get number of currently created characters.
      *
-     * @return number of currently created characters registered on this {@link ru.rougegibbons.landsanddungeons.entities.interfaces.core.User}.
+     * @return number of currently created characters registered.
      */
     @NotNull Integer getCharactersCount();
 

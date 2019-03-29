@@ -44,7 +44,9 @@ public interface ActionContext extends Context {
      */
     interface AbilityUseActionContext extends TargetedActionContext {
         /**
-         * @return
+         * get ability being used during this action.
+         *
+         * @return {@link Ability} being used during this action.
          */
         @NotNull Ability getUsedAbility();
     }

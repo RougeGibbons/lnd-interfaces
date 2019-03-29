@@ -21,7 +21,7 @@ public interface Friendship extends Vote {
     @NotNull UserCharacterSocialData getSenderFriend();
 
     /**
-     * get {@link UserCharacterSocialData} on the character who accepted the request
+     * get {@link UserCharacterSocialData} on the character who accepted the request.
      *
      * @return target's {@link UserCharacterSocialData}.
      */

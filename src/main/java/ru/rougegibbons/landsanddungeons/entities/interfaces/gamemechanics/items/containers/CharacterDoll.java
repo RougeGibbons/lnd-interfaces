@@ -22,35 +22,47 @@ import ru.rougegibbons.landsanddungeons.entities.interfaces.gamemechanics.alive.
  */
 public interface CharacterDoll extends ItemContainer {
     /**
-     * @return
+     * get raw (unaffected by stat bonuses) damage value.
+     *
+     * @return {@link AffectorComponent} storing raw damage value.
      */
     @NotNull AffectorComponent getRawDamage();
 
     /**
-     * @return
+     * get total defense (without wearer's bonuses) given by equipped items.
+     *
+     * @return {@link AffectorComponent} storing total defense value given by the equipment.
      */
     @NotNull AffectorComponent getTotalDefense();
 
     /**
-     * @return
+     * get total stat bonuses given by the equipment
+     *
+     * @return {@link StatListPropertyComponent} instance storing equipment's stat bonuses.
      */
     @NotNull StatListPropertyComponent getTotalStatsBonus();
 
     /**
-     * @param statId
-     * @return
+     * get total equipment bonus to the particular stat.
+     *
+     * @param statId - index of the stat to get bonus for.
+     * @return {@link EntityStatPropertyComponent} with total equipment bonus to the particular stat or null if the index is invalid.
      */
     default @Nullable EntityStatPropertyComponent getStatBonus(@NotNull Integer statId) {
         return getTotalStatsBonus().getOrDefault(statId, null);
     }
 
     /**
-     * @return
+     * get average equipment score representing total equipment quality.
+     *
+     * @return average equipment score.
      */
     @NotNull Integer getAverageEquipmentScore();
 
     /**
-     * @param toEquip
+     * tries to equip the item from given inventory slot.
+     *
+     * @param toEquip - {@link GameEntityStorageComponent.ItemSlot} storing the item to equip.
      */
     void equip(@NotNull GameEntityStorageComponent.ItemSlot toEquip);
 

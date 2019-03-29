@@ -181,7 +181,7 @@ public interface UserCharacter extends AliveEntity, Levelable {
     /**
      * get access to character's {@link GuildMembershipComponent} if the character is in guild.
      *
-     * @return {@link GuildMembershipComponent} providing access to character's guild membership's data if this character is in guild, null otherwise.
+     * @return {@link GuildMembershipComponent} representing characte's guild membership data if character is in guild, null otherwise.
      */
     default @Nullable GuildMembershipComponent getGuildMembership() {
         return getSocialData().getGuild();

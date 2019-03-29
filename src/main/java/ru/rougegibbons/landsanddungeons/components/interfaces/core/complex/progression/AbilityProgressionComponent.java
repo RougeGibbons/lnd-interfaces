@@ -7,7 +7,8 @@ import ru.rougegibbons.landsanddungeons.components.interfaces.core.properties.Up
 
 /**
  * Component representing {@link ru.rougegibbons.landsanddungeons.entities.interfaces.gamemechanics.alive.user.UserCharacter}'s
- * progression and current state of given {@link ru.rougegibbons.landsanddungeons.entities.interfaces.gamemechanics.flyweights.classes.Ability}:
+ * progression and current state of given
+ * {@link ru.rougegibbons.landsanddungeons.entities.interfaces.gamemechanics.flyweights.classes.Ability}:
  * its level, mastery, level, cooldown, etc.
  *
  * @see UpdateablePropertyComponent
@@ -62,7 +63,7 @@ public interface AbilityProgressionComponent
     @NotNull ClampedNumberComponent.ClampedIntegerComponent getMasteryProgression();
 
     /**
-     * check if {@link ru.rougegibbons.landsanddungeons.entities.interfaces.gamemechanics.flyweights.classes.Ability} is available for usage.
+     * check if ability is available for usage.
      *
      * @return true if ability's cooldown is zero, false otherwise.
      */

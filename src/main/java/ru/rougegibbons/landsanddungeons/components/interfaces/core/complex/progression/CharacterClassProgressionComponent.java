@@ -46,7 +46,7 @@ public interface CharacterClassProgressionComponent
     /**
      * get character's progression in given class' perk tree.
      *
-     * @return {@link PerkTreeProgressionComponent} instance storing data about character's progression in given {@link CharacterClass} perk tree.
+     * @return character's progression in given {@link CharacterClass} perk tree as {@link PerkTreeProgressionComponent}.
      */
     @NotNull PerkTreeProgressionComponent getPerkBranchesProgression();
 

@@ -33,7 +33,7 @@ public interface Guild extends UpdateableEntity, Levelable {
      * get the group member by id.
      *
      * @param memberId - id of the member to get.
-     * @return {@link UserCharacter} implementation instance representing requested group member or null if there's no member with such id in the group.
+     * @return {@link UserCharacter} as requested group member or null if there's no member with such id in the group.
      */
     @Nullable UserCharacter getMember(@NotNull Long memberId);
 
