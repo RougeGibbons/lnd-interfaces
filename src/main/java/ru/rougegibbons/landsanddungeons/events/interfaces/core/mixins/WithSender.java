@@ -1,8 +1,10 @@
 package ru.rougegibbons.landsanddungeons.events.interfaces.core.mixins;
 
 import org.jetbrains.annotations.NotNull;
+import ru.rougegibbons.landsanddungeons.backends.interfaces.Backend;
 import ru.rougegibbons.landsanddungeons.components.interfaces.Component;
 import ru.rougegibbons.landsanddungeons.entities.interfaces.core.GameEntity;
+import ru.rougegibbons.landsanddungeons.managers.interfaces.Manager;
 import ru.rougegibbons.landsanddungeons.systems.interfaces.System;
 
 /**
@@ -52,6 +54,27 @@ public interface WithSender<T> {
      * @since 1.1.2
      */
     interface SystemSender<T extends System<?>> extends WithSender<T> {
+
+    }
+
+    /**
+     * {@link WithSender} interface extension for events where sender is some {@link Manager} implementation instance.
+     *
+     * @param <T> - {@link Manager} interface implementation.
+     * @see Manager
+     * @since 1.1.3
+     */
+    interface ManagerSender<T extends Manager<?>> extends WithSender<T> {
+
+    }
+
+    /**
+     * {@link WithSender} interface extension for event where sender is some {@link Backend} implementation instance.
+     *
+     * @see Backend
+     * @since 1.1.3
+     */
+    interface BackendSender extends WithSender<Backend> {
 
     }
 }
