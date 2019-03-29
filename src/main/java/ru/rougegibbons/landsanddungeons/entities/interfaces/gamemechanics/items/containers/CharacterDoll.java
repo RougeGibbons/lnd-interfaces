@@ -36,7 +36,7 @@ public interface CharacterDoll extends ItemContainer {
     @NotNull AffectorComponent getTotalDefense();
 
     /**
-     * get total stat bonuses given by the equipment
+     * get total stat bonuses given by the equipment.
      *
      * @return {@link StatListPropertyComponent} instance storing equipment's stat bonuses.
      */
@@ -67,8 +67,10 @@ public interface CharacterDoll extends ItemContainer {
     void equip(@NotNull GameEntityStorageComponent.ItemSlot toEquip);
 
     /**
-     * @param toEquip
-     * @param slotId
+     * tries to equip the item from given bag slot to given equipment slot.
+     *
+     * @param toEquip - {@link GameEntityStorageComponent.ItemSlot} storing the item to equip.
+     * @param slotId - index of the equipment slot to put the item to.
      */
     void equip(@NotNull GameEntityStorageComponent.ItemSlot toEquip, @NotNull Integer slotId);
 }
